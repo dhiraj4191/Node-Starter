@@ -1,7 +1,7 @@
 {
-  "main": {
-    "helloWorld": "Hello, world !",
-    "text": "This is a starter kit for MEAN stack applications",
+  "jenkins": {
+    "starter": "Jenkins Starter",
+    "text": "This is demo page to request Jenkins REST API",
     "name": {
       "label": "Name",
       "placeholder": "Enter a name"
@@ -10,7 +10,22 @@
       "label": "Description",
       "placeholder": "Enter a description"
     },
-    "show": "Show",
+    "invoke": "Invoke",
+    "submit": "Send"
+  },
+
+  "main" : {
+    "starter": "Demo Home",
+    "text": "This is Home page of demo application",
+    "name": {
+      "label": "Name",
+      "placeholder": "Enter a name"
+    },
+    "description": {
+      "label": "Description",
+      "placeholder": "Enter a description"
+    },
+    "invoke": "Invoke",
     "submit": "Send"
   }
 }

@@ -11,7 +11,12 @@
 
     $stateProvider.state('home', {
       url: '/',
-      template: '<main></main>'
+      template : '<main></main>'
+    });
+
+    $stateProvider.state('jenkins', {
+      url: '/jenkins',
+      template: '<full-build></full-build>'
     });
 
     $urlRouterProvider.otherwise('/');

@@ -1,6 +1,10 @@
 'use strict';
 
-var Thing = require('./thing.model');
+var Client = require('node-rest-client').Client;
+var client = new Client();
+var request = require('request');
+var Thing = require('./../../model/build/jenkins.build.model');
+var path = require('path');
 
 /**
  * GET /things
@@ -18,6 +22,15 @@ exports.find = function(req, res, next) {
   });
 };
 
+exports.makecall = function(req, res, next) {
+  client.get('http://jsonplaceholder.typicode.com/posts/1', function(data, response) {
+    console.log('passed');
+    return res.status(200).json(data);
+  }).on('error', function(err) {
+
+    return  res.status(500).json({body : "Error occured !!!"});
+  });
+};
 /**
  * GET /things/:id
  *

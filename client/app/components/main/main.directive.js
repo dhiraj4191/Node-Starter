@@ -6,7 +6,7 @@
     .directive('main', function() {
       return {
         restrict: 'E',
-        templateUrl: 'app/components/main/main.html',
+        templateUrl: 'app/components/views/main.html',
         controller: MainCtrl,
         controllerAs: 'mainVm',
         bindToController: true

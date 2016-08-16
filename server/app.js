@@ -10,7 +10,7 @@ var cors = require('cors');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var routes = require('./src/routes');
+var routes = require('./src/route/build/jenkins.build.route.js');
 
 /**
  * MongoDB configurations
@@ -68,7 +68,10 @@ app.use(cors());
 app.use(routes);
 
 // Static files
-app.use('/', express.static(__dirname + '/../public'));
+app.use('/', express.static(__dirname + '/../client'));
+
+app.set('view engine', 'jade');
+app.engine('jade', require('jade').__express);
 
 // Once database open, start server
 mongoose.connection.once('open', function callback() {

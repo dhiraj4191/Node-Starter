@@ -17,6 +17,7 @@
     "angular-dynamic-locale": "~0.1.28",
     "angular-translate-storage-local": "~2.10.0",
     "angular-translate-loader-static-files": "~2.10.0",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "angular-route": "1.5.x"
   }
 }

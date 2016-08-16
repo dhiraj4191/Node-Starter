@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>{{'jenkins.starter' | translate}}</h1>
+      <p>{{'jenkins.text' | translate}}</p>
+    </div>
+  </div>
+  <div class="container">
+    <h2>Invoke Jenkins Build Call</h2>
+    <div>
+      <button class="btn btn-success" ng-click="jenkinsFullBuild.executeBuild()">{{'jenkins.invoke' | translate}}</button>
+      <ul>
+        <li>
+          Response : {{jenkinsFullBuild.thingList.body}}</br>
+        </li>
+        <li>
+          Status: {{jenkinsFullBuild.status}}
+        </li>
+        <li ng-if="jenkinsFullBuild.thingsList.length == 0">
+          <strong>No results found...</strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
